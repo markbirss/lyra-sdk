@@ -37,6 +37,26 @@
 	status = "okay";
 };
 
+/**********spidev**********/
+
+&spi0 {
+	status = "okay";
+	spidev@0 {
+                  compatible = "rockchip,spidev";
+		  spi-max-frequency = <50000000>;
+		  reg = <0>;
+	};
+};
+
+&spi1 {
+	status = "okay";
+	spidev@0 {
+                  compatible = "rockchip,spidev";
+		  spi-max-frequency = <50000000>;
+		  reg = <0>;
+	};
+};
+
 /**********ethernet**********/
 &gmac1 {
 	status = "disabled";
